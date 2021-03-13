@@ -12,6 +12,9 @@ import java.nio.file.Files;
 import java.text.*;
 import java.util.*;
 
+import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
 import org.json.*;
 import org.slf4j.Logger;
 
@@ -35,7 +38,7 @@ public class ExcelReportGenerator extends Resource {
 					"isRequired:true", "isEntityDataShape:true" }) InfoTable InfoTableData,
 			@ThingworxServiceParameter(name = "RepositoryName", description = "", baseType = "THINGNAME", aspects = {
 					"isRequired:true", "thingTemplate:FileRepository" }) String RepositoryName,
-			@ThingworxServiceParameter(name = "ExcelTemplateLocation", description = "", baseType = "STRING") String ExcelTemplateLocation) {
+			@ThingworxServiceParameter(name = "ExcelTemplateLocation", description = "", baseType = "STRING") String ExcelTemplateLocation) throws Exception {
 		_logger.trace("Entering Service: ExcelExport");
 		// TODO Auto-generated method stub
 				/******** STORE THE TEMPLATE LOCATION *****/
@@ -213,8 +216,6 @@ public class ExcelReportGenerator extends Resource {
 				_logger.trace("Exiting Service: Exporter");
 				String download = "/Thingworx/FileRepositories/SystemRepository/" + reportDate + "." + ext1;
 				return download;
-		_logger.trace("Exiting Service: ExcelExport");
-		return null;
 	}
 	private String getFileExtension(File fileToCopy) {
 		String fileName = fileToCopy.getName();

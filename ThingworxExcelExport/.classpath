@@ -19,5 +19,9 @@
 	<classpathentry kind="lib" path="twx-lib/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="twx-lib/jackson-core-2.9.5.jar"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="E:/Java Jars/POI/poi-bin-5.0.0-20210120/poi-5.0.0/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Jars/POI/poi-bin-5.0.0-20210120/poi-5.0.0/poi-ooxml-5.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-5.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

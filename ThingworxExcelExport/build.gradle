@@ -94,6 +94,8 @@ task createZip(type:Zip) {
     // including all jars from the lib folder
     from ('lib') {
         include '**/*.jar'
+        exclude 'poi-5.0.0.jar'
+        exclude 'poi-ooxml-5.0.0.jar'
         into 'lib/common'
     }
     
